@@ -1,0 +1,21 @@
+main:
+    #  - title: "Posts"
+    #    url: /posts/
+    #  - title: "Categories"
+    #    url: /categories/
+      - title: "Writeups"
+        url: /writeups/
+    #  - title: "Tags"
+    #    url: /tags/
+
+
+# Navigation for BTLO
+btlo:
+    - title: "Incident Response"
+      children:
+          - title: "Pretium"
+            url: /writeups/btlo/pretium
+    - title: "Digital Forensics"
+      children:
+          - title: "Countdown"
+            url: /writeups/btlo/countdown
