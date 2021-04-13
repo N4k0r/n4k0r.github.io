@@ -86,7 +86,7 @@ What is the registered phone number and profile name of Zerry in the messenger a
 **13026482364,ZerryThe🔥**
 {: .notice--success}
 
-***Note***: There are a lot of emojis in this challenge, and they are required in the answers. For that I used [this website](https://emojipedia.org/collision/).
+***Note***: There are a lot of emojis in this challenge, and they are required in the answers. For that I used [this website](https://emojipedia.org).
 
 By reviewing the related messages, we can see two friends (Tom and Jerry!) talking about their plan to bomb a city. We also find an email address:  
 
