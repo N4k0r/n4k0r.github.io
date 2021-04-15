@@ -14,7 +14,7 @@ In this investigation, we have two files, a disk image and a text file. By readi
 
 From that same file we also have all information for the first question:  
 
-[![](/assets/images/btlo/countdown/a15ac1c2e02a4f6396feb03549426a86.png)](/assets/images/btlo/countdown/a15ac1c2e02a4f6396feb03549426a86.png)
+[![](/assets/images/btlo/countdown/a15ac1c2e02a4f6396feb03549426a86.png){: .align-center}](/assets/images/btlo/countdown/a15ac1c2e02a4f6396feb03549426a86.png)
 
 
 Verify the Disk Image. Submit SectorCount and MD5.  
@@ -25,15 +25,15 @@ Verify the Disk Image. Submit SectorCount and MD5.
 
 Now let's analyze the disk image witn **Autopsy**. To gain some time, a case already exist with provided analysis results:  
 
-[![](/assets/images/btlo/countdown/4de5be29a29a461d98f95c0e78b6f180.png)](/assets/images/btlo/countdown/4de5be29a29a461d98f95c0e78b6f180.png)
+[![](/assets/images/btlo/countdown/4de5be29a29a461d98f95c0e78b6f180.png){: .align-center}](/assets/images/btlo/countdown/4de5be29a29a461d98f95c0e78b6f180.png)
 
 Let's see the modules that were used for the analysis to have a better ideas with the artifacts available to us. For that, we can check the ingest modules:  
 
-[![](/assets/images/btlo/countdown/f738d34b1c964f5bb37c7630bc857139.png)](/assets/images/btlo/countdown/f738d34b1c964f5bb37c7630bc857139.png)
+[![](/assets/images/btlo/countdown/f738d34b1c964f5bb37c7630bc857139.png){: .align-center}](/assets/images/btlo/countdown/f738d34b1c964f5bb37c7630bc857139.png)
 
 The autopsy modules that were used are the following ones:  
 
-[![](/assets/images/btlo/countdown/0efe55099d3644a3a4589e0782a38e7b.png)](/assets/images/btlo/countdown/0efe55099d3644a3a4589e0782a38e7b.png)
+[![](/assets/images/btlo/countdown/0efe55099d3644a3a4589e0782a38e7b.png){: .align-center}](/assets/images/btlo/countdown/0efe55099d3644a3a4589e0782a38e7b.png)
 
 To find the decryption key for the online messenger app, I first needed to know what application it was refering to.
 
@@ -41,7 +41,7 @@ I first checked the **Installed Programs** in autopsy results, but I didn't find
 
 From Autopsy we navigate to **C:\Windows\Prefetch** and I noticed two applications that could be good candidates, **Signal** and **Skype**:  
 
-[![](/assets/images/btlo/countdown/7eeec3e1c07747a3b0d7ec5895e14247.png)](/assets/images/btlo/countdown/7eeec3e1c07747a3b0d7ec5895e14247.png)
+[![](/assets/images/btlo/countdown/7eeec3e1c07747a3b0d7ec5895e14247.png){: .align-center}](/assets/images/btlo/countdown/7eeec3e1c07747a3b0d7ec5895e14247.png)
 
 ### Access Signal database
 
@@ -51,7 +51,7 @@ It appears that the decryption key is stored in clear text in ***%AppData%\Signa
 
 In our case the file is located in ***%AppData%\Roaming\Signal\config.json***:  
 
-[![](/assets/images/btlo/countdown/08dace888544417a8b7db1f8cf22a37a.png)](/assets/images/btlo/countdown/08dace888544417a8b7db1f8cf22a37a.png)
+[![](/assets/images/btlo/countdown/08dace888544417a8b7db1f8cf22a37a.png){: .align-center}](/assets/images/btlo/countdown/08dace888544417a8b7db1f8cf22a37a.png)
 
 (You can either get the value directly from the Text tab from Autopsy or you can extract the file by right clicking on it.)
 
@@ -64,23 +64,23 @@ From the same article we learn that the related database is located at **%AppDat
 
 Since we don't have the passphrase, we need to select **Raw Key**:  
 
-[![](/assets/images/btlo/countdown/4f1981df89324a368d83b66d5f337911.png)](/assets/images/btlo/countdown/4f1981df89324a368d83b66d5f337911.png)
+[![](/assets/images/btlo/countdown/4f1981df89324a368d83b66d5f337911.png){: .align-center}](/assets/images/btlo/countdown/4f1981df89324a368d83b66d5f337911.png)
 
 Once selected, you'll notice that the background text change with **0x...**, this means that we need to put 0x at the beginning of the key (you won't be able to paste the key otherwise, took me a while to realise it...):
 
-[![](/assets/images/btlo/countdown/8c6b2f9b4c094b0aa529ede4dfa5e853.png)](/assets/images/btlo/countdown/8c6b2f9b4c094b0aa529ede4dfa5e853.png)
+[![](/assets/images/btlo/countdown/8c6b2f9b4c094b0aa529ede4dfa5e853.png){: .align-center}](/assets/images/btlo/countdown/8c6b2f9b4c094b0aa529ede4dfa5e853.png)
 
 We can then decrypt the database with the default options:  
 
-[![](/assets/images/btlo/countdown/12eb8a6bc6494bc685031bb16def91b0.png)](/assets/images/btlo/countdown/12eb8a6bc6494bc685031bb16def91b0.png)
+[![](/assets/images/btlo/countdown/12eb8a6bc6494bc685031bb16def91b0.png){: .align-center}](/assets/images/btlo/countdown/12eb8a6bc6494bc685031bb16def91b0.png)
 
 In the database we find a conversation:  
 
-[![](/assets/images/btlo/countdown/6203dca174314e05836859cfdecef93c.png)](/assets/images/btlo/countdown/6203dca174314e05836859cfdecef93c.png)
+[![](/assets/images/btlo/countdown/6203dca174314e05836859cfdecef93c.png){: .align-center}](/assets/images/btlo/countdown/6203dca174314e05836859cfdecef93c.png)
 
 From the related metadata, we get more information regarding the user:  
 
-[![](/assets/images/btlo/countdown/de8f8092d5024c829a881352d8ee580b.png)](/assets/images/btlo/countdown/de8f8092d5024c829a881352d8ee580b.png)
+[![](/assets/images/btlo/countdown/de8f8092d5024c829a881352d8ee580b.png){: .align-center}](/assets/images/btlo/countdown/de8f8092d5024c829a881352d8ee580b.png)
 
 What is the registered phone number and profile name of Zerry in the messenger application used?  
 **13026482364,ZerryThe🔥**
@@ -90,7 +90,7 @@ What is the registered phone number and profile name of Zerry in the messenger a
 
 By reviewing the related messages, we can see two friends (Tom and Jerry!) talking about their plan to bomb a city. We also find an email address:  
 
-[![](/assets/images/btlo/countdown/b7959b412b4d4d449c32264fd8a93638.png)](/assets/images/btlo/countdown/b7959b412b4d4d449c32264fd8a93638.png)
+[![](/assets/images/btlo/countdown/b7959b412b4d4d449c32264fd8a93638.png){: .align-center}](/assets/images/btlo/countdown/b7959b412b4d4d449c32264fd8a93638.png)
 
 What is the email id found in the chat?  
 **eekurk@baybabes.com**
@@ -104,7 +104,7 @@ When reviewing the recent documents from Autopsy, we notice a [**.lnk**](https:/
 
 According to the previous converstaion, the same "time" emoji was used:  
 
-[![](/assets/images/btlo/countdown/e26f4b0ae60c4183b5a7be06044ee1b2.png)](/assets/images/btlo/countdown/e26f4b0ae60c4183b5a7be06044ee1b2.png)
+[![](/assets/images/btlo/countdown/e26f4b0ae60c4183b5a7be06044ee1b2.png){: .align-center}](/assets/images/btlo/countdown/e26f4b0ae60c4183b5a7be06044ee1b2.png)
 
 It is more likely that this shortcut is related to the file attached to the email.
 
@@ -114,7 +114,7 @@ What is the filename(including extension) that is received as an attachment via 
 
 As per the hints, since the file is an image, we can check the [**Thumbcache**](https://www.sans.org/security-resources/posters/windows-forensic-analysis/170/download "Thumbnails of pictures, office documents, and folders exist in a database called the thumbcache. Each user will have their own database based on the thumbnail sizes viewed by the user (small, medium, large, and extra-larger)"). This data is stored in a **.db** file, we can access it directly from the ***File Types*** view and extract it:  
 
-[![](/assets/images/btlo/countdown/26339d45b29c4f849e797e4c8cf955b0.png)](/assets/images/btlo/countdown/26339d45b29c4f849e797e4c8cf955b0.png)
+[![](/assets/images/btlo/countdown/26339d45b29c4f849e797e4c8cf955b0.png){: .align-center}](/assets/images/btlo/countdown/26339d45b29c4f849e797e4c8cf955b0.png)
 
 The tool **Thumbcache Viewer** is provided, let's use it !
 Once opened, we have multiple results.
@@ -122,7 +122,7 @@ if we filter by data size we notice that only 2 images have a size different tha
 
 If we preview the first one, the image shows a date, with a little sun specifying that the hour is in the morning:  
 
-[![](/assets/images/btlo/countdown/323beb4f24d74ed6aae456c35e8dceb6.png)](/assets/images/btlo/countdown/323beb4f24d74ed6aae456c35e8dceb6.png)
+[![](/assets/images/btlo/countdown/323beb4f24d74ed6aae456c35e8dceb6.png){: .align-center}](/assets/images/btlo/countdown/323beb4f24d74ed6aae456c35e8dceb6.png)
 
 What is the Date and Time of the planned attack?  
 **01-02-2021 09:00 AM**
@@ -142,7 +142,7 @@ Inside the database we find a note that seems to be a GPS location but the conte
 
 As per the hint, we review the user Tor browsing from the **places.sqlite** database to know more how it was encoded.  
 
-[![](/assets/images/btlo/countdown/e0a032b92bbc4747ad4c79fa42c3f8f6.png)](/assets/images/btlo/countdown/e0a032b92bbc4747ad4c79fa42c3f8f6.png)
+[![](/assets/images/btlo/countdown/e0a032b92bbc4747ad4c79fa42c3f8f6.png){: .align-center}](/assets/images/btlo/countdown/e0a032b92bbc4747ad4c79fa42c3f8f6.png)
 
 We just need to apply the **ROT13** algorithm and we get the GPS coordinates.
 
@@ -156,7 +156,7 @@ This investigation was the only one available during the private beta, in which 
 
 I wasn't fast enough with the copy/paste on the official release date to get it back though :p
 
-[![](/assets/images/btlo/countdown/41e5dad237b9456b87ed9535d03f01fb.png)](/assets/images/btlo/countdown/41e5dad237b9456b87ed9535d03f01fb.png)
+[![](/assets/images/btlo/countdown/41e5dad237b9456b87ed9535d03f01fb.png){: .align-center}](/assets/images/btlo/countdown/41e5dad237b9456b87ed9535d03f01fb.png)
 
 ## Resources
 
