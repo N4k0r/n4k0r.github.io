@@ -4,6 +4,9 @@ toc_sticky: true
 layout: btlo
 excerpt: "In a race against time, can you investigate a laptop seized by law enforcement to identify if a bomb threat is real or a hoax?"
 permalink: /writeups/btlo/countdown
+
+header:
+  teaser: "/assets/images/btlo/official/o2geTMCFKgaYvKvokiy3.jpg"
 ---
 
 ![](/assets/images/btlo/official/o2geTMCFKgaYvKvokiy3.jpg)
