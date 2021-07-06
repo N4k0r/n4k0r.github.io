@@ -19,3 +19,5 @@ btlo:
       children:
           - title: "Countdown"
             url: /writeups/btlo/countdown
+          - title: "Bad Logic"
+            url: /writeups/btlo/bad_logic
