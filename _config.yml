@@ -17,7 +17,7 @@ minimal_mistakes_skin_dark: "dark" # "air", "aqua", "contrast", "dark", "dirt", 
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Just another infosec blog"
+title                    : "N4k0r's infosec blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "N4k0r"

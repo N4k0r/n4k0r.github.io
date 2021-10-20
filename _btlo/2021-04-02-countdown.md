@@ -1,17 +1,18 @@
 ---
 toc: true
 toc_sticky: true
+title: Countdown
 layout: btlo
 excerpt: "In a race against time, can you investigate a laptop seized by law enforcement to identify if a bomb threat is real or a hoax?"
 permalink: /writeups/btlo/countdown
 
 header:
   teaser: "/assets/images/btlo/official/o2geTMCFKgaYvKvokiy3.jpg"
+  overlay_image: "/assets/images/btlo/official/o2geTMCFKgaYvKvokiy3.jpg"
+  overlay_filter: "0.7"
 ---
 
-![](/assets/images/btlo/official/o2geTMCFKgaYvKvokiy3.jpg)
-
-## Walkthrough
+# Walkthrough
 
 In this investigation, we have two files, a disk image and a text file. By reading it, we learn that the disk image was generated using [Access Data FTK Imager](https://accessdata.com/product-download).
 
@@ -24,7 +25,7 @@ Verify the Disk Image. Submit SectorCount and MD5.
 **25165824,5c4e94315039f890e839d6992aeb6c58**
 {: .notice--success}
 
-### Investigate Autopsy results
+## Investigate Autopsy results
 
 Now let's analyze the disk image witn **Autopsy**. To gain some time, a case already exist with provided analysis results:  
 
@@ -46,7 +47,7 @@ From Autopsy we navigate to **C:\Windows\Prefetch** and I noticed two applicatio
 
 [![](/assets/images/btlo/countdown/7eeec3e1c07747a3b0d7ec5895e14247.png){: .align-center}](/assets/images/btlo/countdown/7eeec3e1c07747a3b0d7ec5895e14247.png)
 
-### Access Signal database
+## Access Signal database
 
 After some google searches about retrieving the decryption key from one of the two applications, I found this [article](https://www.bleepingcomputer.com/news/security/signal-desktop-leaves-message-decryption-key-in-plain-sight/).
 
@@ -101,7 +102,7 @@ What is the email id found in the chat?
 
 We also learn that an email was sent with an attachment, which was then [erased](https://eraser.heidi.ie/).
 
-### Finding the email attachment
+## Finding the email attachment
 
 When reviewing the recent documents from Autopsy, we notice a [**.lnk**](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/99e8d0e5-5bc6-4aed-af37-da7f584f832a "Specifies the Shell Link Binary File Format, which contains information that can be used to access another data object. The Shell Link Binary File Format is the format of Windows files with the extension LNK.") file with a strange name. 
 
@@ -131,7 +132,7 @@ What is the Date and Time of the planned attack?
 **01-02-2021 09:00 AM**
 {: .notice--success}
 
-### Locate the attack
+## Locate the attack
 
 Now that we have the time of the attack, we need to know where it will occur !
 
@@ -153,7 +154,7 @@ What is the GPS location of the blast? The format is the same as found in the ev
 **40 degrees 45 minutes 28.6776 seconds N, 73 degrees 59 minutes 7.944 seconds W**
 {: .notice--success}
 
-## Final notes
+# Final notes
 
 This investigation was the only one available during the private beta, in which I managed to get the first blood !
 
@@ -161,7 +162,7 @@ I wasn't fast enough with the copy/paste on the official release date to get it 
 
 [![](/assets/images/btlo/countdown/41e5dad237b9456b87ed9535d03f01fb.png){: .align-center}](/assets/images/btlo/countdown/41e5dad237b9456b87ed9535d03f01fb.png)
 
-## Resources
+# Resources
 
 - <https://accessdata.com/product-download>
 
