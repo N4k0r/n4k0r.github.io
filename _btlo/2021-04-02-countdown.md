@@ -43,7 +43,7 @@ To find the decryption key for the online messenger app, I first needed to know 
 
 I first checked the **Installed Programs** in autopsy results, but I didn't find anything relevant. I then checked the [**Prefecth**](https://digital-forensics.sans.org/media/DFIR-Command-Line.pdf "Prefetch is one source of evidence of a program being run on a system, otherwise known as evidence of execution. Prefetch files are created in the C:\Windows\Prefetch folder when a program is run from a specific location. If that program is run from more than one location, there will be a separate Prefetch file created for each location from which the program ran. Prefetch files are not automatically deleted if the related program is deleted and therefore can be a source of historical information.") directory as per the hints.
 
-From Autopsy we navigate to **C:\Windows\Prefetch** and I noticed two applications that could be good candidates, **Signal** and **Skype**:  
+From Autopsy we navigate to `<C:\Windows\Prefetch>` and I noticed two applications that could be good candidates, **Signal** and **Skype**:  
 
 [![](/assets/images/btlo/countdown/7eeec3e1c07747a3b0d7ec5895e14247.png){: .align-center}](/assets/images/btlo/countdown/7eeec3e1c07747a3b0d7ec5895e14247.png)
 
@@ -51,9 +51,9 @@ From Autopsy we navigate to **C:\Windows\Prefetch** and I noticed two applicatio
 
 After some google searches about retrieving the decryption key from one of the two applications, I found this [article](https://www.bleepingcomputer.com/news/security/signal-desktop-leaves-message-decryption-key-in-plain-sight/).
 
-It appears that the decryption key is stored in clear text in ***%AppData%\Signal\config.json*** ...
+It appears that the decryption key is stored in clear text in `<%AppData%\Signal\config.json>` ...
 
-In our case the file is located in ***%AppData%\Roaming\Signal\config.json***:  
+In our case the file is located in `<%AppData%\Roaming\Signal\config.json>`:  
 
 [![](/assets/images/btlo/countdown/08dace888544417a8b7db1f8cf22a37a.png){: .align-center}](/assets/images/btlo/countdown/08dace888544417a8b7db1f8cf22a37a.png)
 
@@ -64,7 +64,7 @@ What is the decryption key of the online messenger app used by Zerry?
 {: .notice--success}
 
 Ok, so now that we have a decryption key, we need to use it !
-From the same article we learn that the related database is located at **%AppData%\Roaming\Signal\sql\db.sqlite**. Let's extract this database and try to open it. From the **Tools** directory, we have the utility **SQLite Database Browser Portable**.
+From the same article we learn that the related database is located at `<%AppData%\Roaming\Signal\sql\db.sqlite>`. Let's extract this database and try to open it. From the **Tools** directory, we have the utility **SQLite Database Browser Portable**.
 
 Since we don't have the passphrase, we need to select **Raw Key**:  
 
@@ -168,9 +168,9 @@ I wasn't fast enough with the copy/paste on the official release date to get it 
 
 - <https://www.bleepingcomputer.com/news/security/signal-desktop-leaves-message-decryption-key-in-plain-sight/>
 
-- <https://emojipedia.org/collision/>
+- <https://emojipedia.org>
 
-- <https://eraser.heidi.ie/>
+- <https://eraser.heidi.ie>
 
 - <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/99e8d0e5-5bc6-4aed-af37-da7f584f832a >
 
