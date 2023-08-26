@@ -1,0 +1,87 @@
+baseURL = "https://n4k0r.github.io/"
+theme = "LoveIt"
+title = "N4k0r's Blog"
+languageCode = "en"
+languageName = "English"
+enableEmoji = true
+
+
+[author]
+    name = "N4k0r"
+    link = "https://n4k0r.github.io"
+
+[menu]
+    [[menu.main]]
+        weight = 1
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        title = "Posts"
+   [[menu.main]]
+        weight = 2
+        identifier = "categories"
+        name = "Categories"
+        url = "/categories/"
+        title = "Categories"
+    [[menu.main]]
+        weight = 3
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        title = "Tags"
+
+[params]
+    title = "N4k0r's Infosec Journey"
+    description = ""
+
+    [params.header]
+        [params.header.title]
+            name = "N4k0r's Infosec Journey"
+
+    [params.footer]
+        enable = true
+        custom = ""
+        hugo = false
+        copyright = true
+        author = true
+        since = 2021
+
+    [params.home]
+        [params.home.profile]
+            enable = false
+    [params.page]
+        [params.page.toc]
+            enable = true
+            keepstatic = false
+            auto = true
+        [params.page.code]
+            copy = true
+            maxShownLines = 50
+        [params.page.share]
+            enable = false
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
