@@ -20,10 +20,15 @@ Go to ***Edit -> Tool Options*** and then in the new window: ***Options -> Listi
 
 ### Add entropy margin
 
-You can add an entropy margin in the Listing view which may be usefull to identify encrypted/compressed data:
+You can add an entropy margin in the Listing view which may be useful to identify encrypted/compressed data:
 
 {{< image src="images/tips/ghidra/2023-08-27-214405.png" caption="Add entropy margin" >}}
 
+### Better route edges in graph view
+
+If in the graphical view you have difficulties to read properly routes edges, you can try the graph option to route edges around vertices (which is disabled by default): ***Edit -> Tool Options -> Options -> Graph -> Nested Code Layout -> Route Edges Around Vertices***:
+
+{{< image src="images/tips/ghidra/2023-08-28-201830.png" caption="Route edges around vertices option" >}}
 
 ## Analyzers
 
