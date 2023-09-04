@@ -44,6 +44,16 @@ If the analyzer was not enabled during the first analysis, it can be run later w
 
 {{< image src="images/tips/ghidra/2023-08-26-224735.png" caption="Decompiler Parameter ID analyzer description" >}}
 
+### Disable PDB Analyzer
+If analyzing executables that you compiled yourself, you may not want to load related `PDB` files as it is very rare to have them when analysing malware samples. This is enabled by default during the analysis step and you can disable it at that point :
+
+
+{{< image src="images/tips/ghidra/2023-09-04-123732.png" caption="Disable PDB analyzer" >}}
+
+{{< admonition type=note >}}
+There is no prompt asking to load or not the PDB when first importing a file like in IDA.
+{{< /admonition >}}
+
 ## Cross references (XREFS)
 
 ### Unwanted XREFS
