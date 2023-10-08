@@ -1,5 +1,5 @@
 ---
-title: Ghidra
+title: Ghidra tips
 url: /tips/ghidra
 categories: ["Tips"]
 tags: ["Ghidra", "Reverse Engineering"]
