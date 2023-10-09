@@ -60,6 +60,15 @@ There is no prompt asking to load or not the PDB when first importing a file lik
 
 If the address of a function happens to be at the very beginning of the `.text` section, some PE fields in the Headers section (like **BaseOfCode** for example) indirectly reference the start of the `.text` section, which may create additional XREFS.
 
+## Namespaces
+
+To better organize functions through your analysis, you can create namespaces and drag an drop the function into it. When adding a function into a namespace, it will no longer be available in the ***Functions*** directory. You can also create sub-namespaces:
+{{< image src="images/tips/ghidra/2023-10-09-165641.png" caption="Namespaces created for better organization" >}}
+
+If a function is part of a namespace, it will be appended at the beginning of its name, as well as all sub-namespaces it is a part of:
+{{< image src="images/tips/ghidra/2023-10-09-170333.png" caption="Namespaces and sub-namespaces appended at the beginning of the functioname" >}}
+
+
 ## References
 
 - ***The Ghidra Book: The Definitive Guide*** by Chris Eagle and Kara Nance
