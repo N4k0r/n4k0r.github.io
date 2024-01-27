@@ -4,6 +4,7 @@ title = "N4k0r's Blog"
 languageCode = "en"
 languageName = "English"
 enableEmoji = true
+enableGitInfo = true
 
 
 [author]
