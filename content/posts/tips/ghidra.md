@@ -12,9 +12,9 @@ lightgallery: true
 
 ### Cursor Text Highlight
 
-By default, you need to use the middle mous button on a variable to highlight all other occurences in the code browser. You can change it to the left mouse button for a more natrual feel.
+By default, you need to use the middle mouse button on a variable to highlight all other occurences in the code browser. You can change it to the left mouse button for a more natural feel.
 
-Go to ***Edit -> Tool Options*** and then in the new window: ***Options -> Listing Fields -> Cursor Text Highlight*** and change the ***Mouse Button To Actovate*** from ***MIDDLE*** to ***LEFT***:
+Go to ***Edit -> Tool Options*** and then in the new window: ***Options -> Listing Fields -> Cursor Text Highlight*** and change the ***Mouse Button To Activate*** from ***MIDDLE*** to ***LEFT***:
 
 {{< image src="images/tips/ghidra/2023-08-27-213257.png" caption="Cursor Text Highlight" >}}
 
@@ -45,8 +45,8 @@ If the analyzer was not enabled during the first analysis, it can be run later w
 {{< image src="images/tips/ghidra/2023-08-26-224735.png" caption="Decompiler Parameter ID analyzer description" >}}
 
 ### Disable PDB Analyzer
-If analyzing executables that you compiled yourself, you may not want to load related `PDB` files as it is very rare to have them when analysing malware samples. This is enabled by default during the analysis step and you can disable it at that point :
 
+If analyzing executables that you compiled yourself, you may not want to load related `PDB` files as it is very rare to have them when analysing malware samples. This is enabled by default during the analysis step and you can disable it at that point :
 
 {{< image src="images/tips/ghidra/2023-09-04-123732.png" caption="Disable PDB analyzer" >}}
 
@@ -54,11 +54,26 @@ If analyzing executables that you compiled yourself, you may not want to load re
 There is no prompt asking to load or not the PDB when first importing a file like in IDA.
 {{< /admonition >}}
 
-## Cross references (XREFS)
+## Cross-references (XREFS)
 
 ### Unwanted XREFS
 
 If the address of a function happens to be at the very beginning of the `.text` section, some PE fields in the Headers section (like **BaseOfCode** for example) indirectly reference the start of the `.text` section, which may create additional XREFS.
+
+### Types of references
+
+Data references:
+<ul>
+    <li>(R): Read</li>
+    <li>(W): Write</li>
+    <li>(*): Pointer</li>
+</ul>  
+
+Code references:
+<ul>
+    <li>(c): call</li>
+    <li>(j): jump</li>
+</ul>  
 
 ## Namespaces
 
