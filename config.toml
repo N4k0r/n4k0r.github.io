@@ -35,6 +35,12 @@ enableGitInfo = true
     title = "N4k0r's Infosec Journey"
     description = ""
 
+    [params.list]
+        dateFormat = "Jan 02"
+
+    [params.section]
+        dateFormat = "Jan 02"
+
     [params.header]
         [params.header.title]
             name = "N4k0r's Infosec Journey"
