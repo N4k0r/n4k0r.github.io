@@ -6,6 +6,8 @@ languageName = "English"
 enableEmoji = true
 enableGitInfo = true
 
+[frontmatter]
+    lastmod = ["lastmod", ":git", "date", "publishDate"]
 
 [author]
     name = "N4k0r"
