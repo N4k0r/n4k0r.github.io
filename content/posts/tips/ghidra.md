@@ -30,6 +30,20 @@ If in the graphical view you have difficulties to read properly routes edges, yo
 
 {{< image src="images/tips/ghidra/2023-08-28-201830.png" caption="Route edges around vertices option" >}}
 
+### Increase fields size in graph view
+
+If in graph view addresses and some operands are not entirely shown, you can increase the size of the display fields by selecting ***Edit Code Block Fields*** in ***Function Graph*** toolbar.
+
+{{< image src="images/tips/ghidra/2024-02-27-151009.png" caption="'Edit Code Block Fields' option" >}}
+
+This will open a new window, go to the ***Instruction/Data*** tab. You can then resize each field and increase there length to your need:
+
+{{< image src="images/tips/ghidra/2024-02-27-151650.png" caption="Resize fields" >}}
+
+Those changes will then be applied to the ***Function Graph*** view:
+
+{{< image src="images/tips/ghidra/2024-02-27-151746.png" caption="Operands and addresses can now be fully seen in graph view" >}}
+
 ## Analyzers
 
 ### Decompiler Parameter ID Analyzer
