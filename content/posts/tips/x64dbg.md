@@ -2,7 +2,7 @@
 title: x64dbg tips
 url: /tips/x64dbg
 categories: ["Tips"]
-tags: ["x64dbg", "Reverse Engineering"]
+tags: ["Reverse Engineering", "x64dbg"]
 date: 2024-03-23
 summary: "Collection of tips I gathered on x64dbg during my RE journey."
 lightgallery: true
@@ -49,9 +49,9 @@ If we take the example from before and we only check the first byte of the 3rd a
 ```
 
 Once added, the condition can be seen in the `Summary` column:
-{{< image src="images/tips/x64dbg/2024-03-23-193130.png" caption="Conditional breakpoint checking first byte of 3rd argument to VisualProtect" >}}
+{{< image src="images/tips/x64dbg/2024-03-23-193130.png" caption="Conditional breakpoint checking first byte of 3rd argument to VirtualProtect" >}}
 
-To test our condition, we try it with the following `C` code that will do several calls to `VisualProtect` with different permission values:
+To test our condition, we try it with the following `C` code that will do several calls to `VirtualProtect` with different permission values:
 ```C
 #include <stdio.h>
 #include <windows.h>
