@@ -65,7 +65,7 @@ enableGitInfo = true
             auto = true
         [params.page.code]
             copy = true
-            maxShownLines = 50
+            maxShownLines = 75
         [params.page.share]
             enable = false
 

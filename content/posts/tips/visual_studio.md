@@ -10,7 +10,7 @@ lightgallery: true
 
 ## Disable optimization
 
-If you disassemble a program you write yourself, you may want at first to disable optimization and enable it latter on and compare differences to better understand how the optimization modifies the assembly code.
+If you disassemble a program you write yourself, you may want at first to disable optimization and enable it later on and compare differences to better understand how the optimization modifies the assembly code.
 
 To disable it (it should be enabled by default): 
 ```{lineNos=false}
