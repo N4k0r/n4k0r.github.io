@@ -97,8 +97,20 @@ To better organize functions through your analysis, you can create namespaces an
 If a function is part of a namespace, it will be appended at the beginning of its name, as well as all sub-namespaces it is a part of:
 {{< image src="images/tips/ghidra/2023-10-09-170333.png" caption="Namespaces and sub-namespaces appended at the beginning of the functioname" >}}
 
+## Useful shortcuts
+
+### Convert to hexadecimal in *Decompile* view
+
+Go to `Edit > Tool Options` and then `Key bindings > "Convert To Hexadecimal"`:
+
+{{< image src="images/tips/ghidra/2024-04-05-140815.png" caption="Configure shortcut to convert to hexadecimal in Decompile view" >}}
+
+{{< admonition type=note >}}
+As specified in the `Plugin Name` column, this shortcut can be only used in the `Decompile` window.
+{{< /admonition >}}
 
 ## References
 
 - ***The Ghidra Book: The Definitive Guide*** by Chris Eagle and Kara Nance
-- https://twitter.com/embee_research/status/1582274169068134400
+- [Matthew Ghidra's tips](https://twitter.com/embee_research/status/1582274169068134400)
+- [c3rb3ru5d3d53c youtube video: Malware Lab - Reverse Engineering String Decryption Algorithms with Ghidra](https://www.youtube.com/watch?v=DxRJKKPmIxQ)
